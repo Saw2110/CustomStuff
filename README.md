@@ -5,5 +5,6 @@
         - TextForm Decoration
         - Container Decoration
         - QR Scanner
+        - Auto Scrollable Text
     - Function
         - Date Converter
