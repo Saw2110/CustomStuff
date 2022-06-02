@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class AutoScrollableText extends StatelessWidget {
   final String scrollableText;
+  final TextStyle style;
 
   final ScrollController _scrollController = ScrollController();
 
-  AutoScrollableText({Key? key, required this.scrollableText})
+  AutoScrollableText(
+      {Key? key, required this.scrollableText, required this.style})
       : super(key: key);
   _scrollToBottom() {
     _scrollController.animateTo(
@@ -21,7 +23,7 @@ class AutoScrollableText extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       controller: _scrollController,
-      child: Text(scrollableText, textAlign: TextAlign.justify),
+      child: Text(scrollableText, style: style),
     );
   }
 }
