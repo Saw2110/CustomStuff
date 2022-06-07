@@ -13,10 +13,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-
   nepali_date_picker: any
-
   qr_code_scanner: any
+  timeago: ^3.2.2
 
 dev_dependencies:
   flutter_test:

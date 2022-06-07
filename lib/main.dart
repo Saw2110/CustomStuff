@@ -18,14 +18,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: CustomColor.primarySwatchColor),
-      home: CustomQRScanner(
-        title: "Scan",
-        topImageSection: imageSection,
-        onScan: (value) {
-          _onQRViewCreated(value, context);
-        },
-      ),
+      theme: ThemeData(primarySwatch: primarySwatchColor),
+      // home: CustomQRScanner(
+      //   title: "Scan",
+      //   topImageSection: imageSection,
+      //   onScan: (value) {
+      //     _onQRViewCreated(value, context);
+      //   },
+      // ),
+      home:CalenderScreen()
     );
   }
 

@@ -23,11 +23,11 @@ class TextFormDecoration {
       contentPadding: const EdgeInsets.all(10.0),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5.0),
-        borderSide: BorderSide(color: primaryColor ?? CustomColor.primaryColor),
+        borderSide: BorderSide(color: primaryColor!),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5.0),
-        borderSide: BorderSide(color: borderColor ?? CustomColor.borderColor),
+        borderSide: BorderSide(color: borderColor!),
       ),
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
     );

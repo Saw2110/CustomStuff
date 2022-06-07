@@ -199,7 +199,7 @@ class CustomQRScannerState extends State<CustomQRScanner>
         borderRadius: 5,
         borderLength: 50,
         borderWidth: 5,
-        overlayColor: widget.primaryColor ?? CustomColor.primaryColor.withOpacity(0.8),
+        overlayColor: widget.primaryColor ?? primaryColor.withOpacity(0.8),
         cutOutSize: scanArea,
       ),
       onPermissionSet: (ctrl, p) => _onPermissionSet(context, ctrl, p),
@@ -263,12 +263,12 @@ class QRScannerAnimation extends AnimatedWidget {
     final Animation<double> animation = listenable as Animation<double>;
     final scorePosition = (animation.value * 300);
 
-    Color color1 = pColor1 ?? CustomColor.primaryColor.withOpacity(0.5);
-    Color color2 = pColor2 ?? CustomColor.primaryColor.withOpacity(0.01);
+    Color color1 = pColor1 ?? primaryColor.withOpacity(0.5);
+    Color color2 = pColor2 ?? primaryColor.withOpacity(0.01);
 
     if (animation.status == AnimationStatus.reverse) {
-      color1 = pColor2 ?? CustomColor.primaryColor.withOpacity(0.01);
-      color2 = pColor1 ?? CustomColor.primaryColor.withOpacity(0.5);
+      color1 = pColor2 ?? primaryColor.withOpacity(0.01);
+      color2 = pColor1 ?? primaryColor.withOpacity(0.5);
     }
 
     return Positioned(
