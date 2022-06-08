@@ -6,4 +6,8 @@ class CustomTextStyle {
       color: Colors.grey.shade500, fontSize: 15.0, fontWeight: FontWeight.bold);
   static TextStyle kTextFormTitle =
       const TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold);
+
+  /// TabBar Text
+ static TextStyle kTabBarText =
+      const TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold);
 }
