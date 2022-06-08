@@ -23,8 +23,8 @@ class CustomTabBar extends StatelessWidget implements PreferredSizeWidget {
         color: Colors.white,
         child: TabBar(
             unselectedLabelColor: Colors.grey,
-            labelColor: customPrimaryColor ?? primaryColor,
-            indicatorColor: customPrimaryColor ?? primaryColor.withOpacity(0.9),
+            labelColor: customPrimaryColor ?? CustomColor.primaryColor,
+            indicatorColor: customPrimaryColor ?? CustomColor.primaryColor.withOpacity(0.9),
             controller: controller,
             indicatorSize: TabBarIndicatorSize.tab,
             tabs: [

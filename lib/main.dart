@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primarySwatch: primarySwatchColor),
+      theme: ThemeData(primarySwatch: CustomColor.primarySwatchColor),
       // home: CustomQRScanner(
       //   title: "Scan",
       //   topImageSection: imageSection,

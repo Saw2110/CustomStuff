@@ -16,7 +16,7 @@ class CustomDivider extends StatelessWidget {
       width: width,
       margin:
       EdgeInsets.symmetric(vertical: 5.0, horizontal: horizontalMargin ?? 0.0),
-      color: color ?? borderColor,
+      color: color ?? CustomColor.borderColor,
     );
   }
 }
@@ -42,7 +42,7 @@ class CustomDottedDivider extends StatelessWidget {
               width: dashWidth,
               height: dashHeight,
               child: DecoratedBox(
-                decoration: BoxDecoration(color: color ?? borderColor),
+                decoration: BoxDecoration(color: color ??CustomColor. borderColor),
               ),
             );
           }),
