@@ -16,6 +16,7 @@ dependencies:
   nepali_date_picker: any
   qr_code_scanner: any
   timeago: ^3.2.2
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:

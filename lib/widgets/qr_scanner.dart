@@ -189,7 +189,7 @@ class CustomQRScannerState extends State<CustomQRScanner>
   Widget buildQrView(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-    var scanArea = (width < 400 || height < 400) ? 200.0 : 300.0;
+    var scanArea = (width < 400 && height < 800) ? 200.0 : 300.0;
 
     return QRView(
       key: qrKey,
@@ -210,7 +210,7 @@ class CustomQRScannerState extends State<CustomQRScanner>
     log('${DateTime.now().toIso8601String()}_onPermissionSet $p');
     if (!p) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('no Permission')),
+        const SnackBar(content: Text('Permission not allowed.')),
       );
     }
   }
