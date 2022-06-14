@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 import 'constant/colors.dart';
-import 'screen/index_screen.dart';
+import 'screen/calender_screen.dart';
 
 void main() {
   runApp(const MyApp());
