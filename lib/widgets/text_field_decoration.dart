@@ -23,13 +23,46 @@ class TextFormDecoration {
       contentPadding: const EdgeInsets.all(10.0),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5.0),
-        borderSide: BorderSide(color: primaryColor??CustomColor.primaryColor),
+        borderSide: BorderSide(color: primaryColor ?? CustomColor.primaryColor),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5.0),
-        borderSide: BorderSide(color: borderColor??CustomColor.borderColor),
+        borderSide: BorderSide(color: borderColor ?? CustomColor.borderColor),
       ),
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
+    );
+  }
+
+  static decoration1({
+    required String hintText,
+    IconData? icon,
+    Color? primaryColor,
+    Color? formFieldColor,
+    TextStyle? hintStyle,
+    Color? borderColor,
+    EdgeInsets? contentPadding,
+  }) {
+    return InputDecoration(
+      prefixIcon: (icon == null) ? null : Icon(icon, color: primaryColor),
+      fillColor: Colors.red.shade50,
+      filled: true,
+      counter: const Offstage(),
+      isDense: true,
+      hintText: "Enter username",
+      labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
+      hintStyle: hintStyle,
+
+      /// To decrease field sizer
+      contentPadding: contentPadding ?? const EdgeInsets.all(10.0),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15.0),
+        borderSide: BorderSide(color: primaryColor ?? CustomColor.primaryColor),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(15.0),
+        borderSide: BorderSide(color: borderColor ?? CustomColor.borderColor),
+      ),
+      border: OutlineInputBorder(borderRadius: BorderRadius.circular(15.0)),
     );
   }
 }
