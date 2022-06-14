@@ -12,6 +12,7 @@
         - Custom Tabbar
         - Custom Divider
         - Custom Buttom Sheet 
+        - Text Form Format
     - Function
         - Date Converter
         - Time Ago Function
