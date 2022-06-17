@@ -1718,6 +1718,7 @@ class CustomDropDown<T> extends FormField<T> {
     T? value,
     required String hint,
     Color? hintTextColor,
+    Color? fillColor,
     Color? primaryColor,
     Color? borderColor,
     Widget? disabledHint,
@@ -1781,7 +1782,7 @@ class CustomDropDown<T> extends FormField<T> {
         /// Custom Decoration ===============
         decoration = decoration ??
             InputDecoration(
-              fillColor: const Color(0xFFF4F6FC),
+              fillColor: fillColor??const Color(0xFFF4F6FC),
               filled: true,
               counter: const Offstage(),
               isDense: true,
@@ -1812,7 +1813,7 @@ class CustomDropDown<T> extends FormField<T> {
                 field as _DropdownButtonFormFieldState<T>;
             final InputDecoration decorationArg = decoration ??
                 InputDecoration(
-                  fillColor: const Color(0xFFF4F6FC),
+                  fillColor: fillColor??const Color(0xFFF4F6FC),
                   filled: true,
                   counter: const Offstage(),
                   isDense: true,
