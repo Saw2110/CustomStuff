@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class TextFormDecoration {
   static decoration({
     required String hintText,
+    IconData? prefixIcon,
+    IconData? suffixIcon,
     IconData? icon,
     Color? primaryColor,
     Color? formFieldColor,
@@ -12,7 +14,10 @@ class TextFormDecoration {
     Color? borderColor,
   }) {
     return InputDecoration(
-      prefixIcon: (icon == null) ? null : Icon(icon, color: primaryColor),
+      prefixIcon:
+          (prefixIcon == null) ? null : Icon(prefixIcon, color: primaryColor),
+      suffixIcon:
+          (suffixIcon == null) ? null : Icon(suffixIcon, color: primaryColor),
       fillColor: formFieldColor,
       filled: true,
       counter: const Offstage(),
@@ -22,17 +27,16 @@ class TextFormDecoration {
       hintStyle: hintStyle ?? CustomTextStyle.kHintText,
       contentPadding: const EdgeInsets.all(10.0),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(5.0),
-        borderSide: BorderSide(color: primaryColor ?? CustomColor.primaryColor),
-      ),
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide:
+              BorderSide(color: primaryColor ?? CustomColor.primaryColor)),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(5.0),
-        borderSide: BorderSide(color: borderColor ?? CustomColor.borderColor),
-      ),
+          borderRadius: BorderRadius.circular(5.0),
+          borderSide:
+              BorderSide(color: borderColor ?? CustomColor.borderColor)),
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
     );
   }
-
   static decoration1({
     required String hintText,
     IconData? icon,
